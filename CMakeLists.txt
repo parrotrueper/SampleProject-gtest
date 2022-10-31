@@ -17,6 +17,7 @@ set(HEADERS
 )
     
 set(SOURCES
+    src/hello-world.cpp
     # fakes
     src/dev_fake_stuff.cpp
 )
