@@ -9,7 +9,7 @@ https://github.com/parrotrueper/googletest-container
 
 ## Dependencies
 
-Build the Docker container gtest built here:
+Build the Docker container *gtest* find it here:
 
 https://github.com/parrotrueper/googletest-container
 
