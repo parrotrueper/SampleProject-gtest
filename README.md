@@ -1,124 +1,32 @@
-# SampleProject-gtest
- 
-# Use a Docker container to build and test
+# skeleton CMAKE project with googletest
 
-## Install test dependencies
- 
- ```
- git clone https://github.com/google/googletest.git
- ```
- 
+## Dependencies
 
- ## Build the docker image
+Docker container gtest built
 
- ```
- docker build -t gtest .
- ```
+https://github.com/parrotrueper/googletest-container
 
- ## Invoke the container
+clone this somewhere in your system and build the container
 
- ```
- ./drun.sh
- ```
 
-## Then from the container
-### building when you change the sources
+Then wherever you want your project to live, clone this repo
 
- ```
- ./do-build.sh
- ```
-
- ### building when you change the unit tests
- 
- ```
- ./do-rebuild.sh
- ```
- 
- ### clean
-
- ```
- ./do-clean.sh
- ```
- 
- ### executing the tests
-
- ```
- ./do-tests.sh
- ``` 
-
- ### executing the binary
-
- ```
- cd build
- ./SampleProject
- ```
-
-# Code
-
-## Sources
-
-src/
+Inside your project tree clone the googletest repo
 
 ```
-hello-world.c
+git clone https://github.com/google/googletest.git
 ```
 
-## Unit tests
+## Build
 
-test/
+Invoke the container
 
 ```
-hello-world-test.cpp
+./run-container.sh
 ```
 
- 
+Within the container
 
-# If you really must, without Docker
-
- ## Install build dependencies
- 
- ```
- sudo apt install libglib2.0-dev
- sudo snap install --classic cmake
- sudo apt install ninja-build
- mkdir build
- ```
-
- 
- ## Install test dependencies
- 
- ```
- git clone https://github.com/google/googletest.git
- ```
- 
- 
- ## building
-
- ```
- cd build
- cmake -GNinja ..
- ninja
- ```
- 
- ## executing the binary
-
- ```
- cd build
- ./SampleProject
- ```
- 
- ## clean
-
- ```
- cd build
- ninja clean
- ```
- 
- ## executing the tests
-
- ```
- cd build/test
- ./unit_tests
- ``` 
-
- 
+```
+./do-build-src.sh
+```

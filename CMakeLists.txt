@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.13)
 
-project(SampleProject LANGUAGES CXX)
+project(HelloWorld LANGUAGES CXX)
 
 add_subdirectory(googletest)
 
@@ -11,15 +11,12 @@ include_directories(${GLIB_INCLUDE_DIRS})
 link_directories(${GLIB_LIBRARY_DIRS})
 
 set(HEADERS
-    include/debug.h
-    # fakes
-    include/dev_fake_stuff.h
+    include/dev_debug.h
 )
     
 set(SOURCES
     src/hello-world.cpp
     # fakes
-    src/dev_fake_stuff.cpp
 )
 
 add_compile_definitions(DD_PRINTK_EN=0)
@@ -33,9 +30,9 @@ target_include_directories(core
 )
 
 
-add_executable(SampleProject main.cpp)
+add_executable(HelloWorld main.cpp)
 
-target_link_libraries(SampleProject
+target_link_libraries(HelloWorld
     core
 #    gcov
     )
